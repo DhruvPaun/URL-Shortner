@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&family=Inter:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900"
+    />
+    <title>About Us - ShortenIt</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <%- include("partials/navbar") %>
+
+    <div class="px-40 flex flex-1 justify-center py-10 bg-[#121b26] min-h-screen">
+      <div class="layout-content-container flex flex-col max-w-[960px] flex-1 text-white">
+        <div class="@container">
+          <h1
+            class="text-[40px] font-black tracking-tight mb-6 @[480px]:text-5xl"
+          >
+            About Us
+          </h1>
+          <p class="text-base font-normal text-[#9cabba] leading-relaxed mb-6 max-w-[720px]">
+            ShortenIt is a leading link management platform dedicated to helping
+            businesses and individuals effortlessly shorten, brand, and track
+            their URLs. Our mission is to empower users with simple,
+            yet powerful tools to enhance their online presence and marketing
+            strategies.
+          </p>
+
+          <p class="text-base font-normal text-[#9cabba] leading-relaxed mb-6 max-w-[720px]">
+            Our platform was built with the vision of connecting people through
+            better link management. We offer intuitive features including custom
+            branded links, real-time click tracking, and in-depth analytics to
+            help you understand your audience and optimize your campaigns.
+          </p>
+
+          <p class="text-base font-normal text-[#9cabba] leading-relaxed max-w-[720px]">
+            At ShortenIt, security and reliability are our top priorities.
+            We maintain a robust infrastructure to ensure your links are safe,
+            fast, and always available. Our dedicated team is constantly
+            innovating to bring you new features and improvements.
+          </p>
+        </div>
+      </div>
+    </div>
+    <br>
+    
+  </body>
+</html>

@@ -1,0 +1,20 @@
+require("dotenv").config()
+const express=require("express")
+const path = require('path');
+const app=express()
+const pagesRouter=require("./routes/pages")
+const urlRouter=require("./routes/url")
+const userRoute=require("./routes/user")
+const dbConnection=require("./dbConnection")
+const cookieParser=require("cookie-parser")
+app.use(cookieParser())
+app.use(express.urlencoded({extended:false}))
+app.set("view engine","ejs")
+app.set("views",path.resolve("./views"))
+dbConnection(process.env.DATABASE_URL)
+app.use("/",pagesRouter)
+app.use("/url",urlRouter)
+app.use("/user",userRoute)
+app.listen(process.env.PORT||8000,()=>{
+    console.log("SERVER STARTED SUCCESSFULLY");
+})

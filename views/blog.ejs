@@ -1,0 +1,157 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-[#111418] dark group/design-root overflow-x-hidden" style='font-family: Inter, "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#283039] px-10 py-3">
+          <div class="flex items-center gap-4 text-white">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path></svg>
+            </div>
+            <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">ShortLink</h2>
+          </div>
+          <%- include("partials/navbar") %>
+            <button
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#283039] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+            >
+              <span class="truncate">New</span>
+            </button>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCCWIMcBdS06mshAnNr1T1Gd4hL44QqKrsdfibeddFntB6hojDYn9GgFdIctIxcnYsHe__6ccpeW1i6Jf4naShKCLnWJMvDEvuSwqpPRHnOZ29P_cxZMyCF97tr21CE6cS1e5jg2FgfHPui-O3rGT6G9B_xLlYunPp0QvpnVCOTRVWuXtwL-7_MhtA9gJEk7OYTcJpIn_SLTP6kIpKqm7EJGhlcXDSuwViA4ydglK13wT22zdRbpHnm0O9H5eDdnVGgGGRzVnrgcV4");'
+            ></div>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4"><p class="text-white tracking-light text-[32px] font-bold leading-tight min-w-72">Blog</p></div>
+            <div class="px-4 py-3">
+              <label class="flex flex-col min-w-40 h-12 w-full">
+                <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+                  <div
+                    class="text-[#9cabba] flex border-none bg-[#283039] items-center justify-center pl-4 rounded-l-lg border-r-0"
+                    data-icon="MagnifyingGlass"
+                    data-size="24px"
+                    data-weight="regular"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <input
+                    placeholder="Search"
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-[#283039] focus:border-none h-full placeholder:text-[#9cabba] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                    value=""
+                  />
+                </div>
+              </label>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-lg">
+                <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                  <p class="text-white text-base font-bold leading-tight">The Ultimate Guide to URL Shortening</p>
+                  <p class="text-[#9cabba] text-sm font-normal leading-normal">Learn everything you need to know about URL shortening, from its benefits to best practices.</p>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBdjY_Dhqb4yscghRNcb-dEWWpeuNdkc8SravfYeTqaMTZPXmi-wFvhTuD2hpwsLTgzWzWMdfPPXG7wU-0hH6psi6nKRmkIIiJGlUhRJwgBh_b0XbCo8qlJ8wMJ-tg9KbwicRorKD9is55uCZvd3OdbBsUZkwUDTyaG61le3EzM9Dn-ErMDl98yJtXIyDHAGzQWYv136eka-tUuzCHp4A5m1r-IcoR4D2ljTd9437grqSZCGmN6tQ8edkBEWXik4MAGAJHPxUBHWgo");'
+                ></div>
+              </div>
+            </div>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Recent Posts</h2>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-lg">
+                <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                  <p class="text-white text-base font-bold leading-tight">5 Ways to Boost Your Click-Through Rates</p>
+                  <p class="text-[#9cabba] text-sm font-normal leading-normal">
+                    Discover effective strategies to increase your click-through rates and drive more traffic to your website.
+                  </p>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCSKn0c4vjy0Ns5B8LpE6FZSJbeETlNsLRYsfbA0mwuDQ-5-UNJId-HDUu21V9rDjYvsEGE64EA_BEO5R_8HIg8I3FKYlNJnSabkpKA6o8o45nyNcJYmKtsIVVZwz1QvCqMV91NoukjEvGHMqTWLYPesvFHAROT3p3jVY3CSZoiDzX2zJnQ01A06Hjku5ILJ5TMe_P7GBtkkkj-3CRbk8vCphlP5HQFE4he-beYDotd6nt0TNRv2QfceTBbmyA6LAn0IqpH4_cYU7M");'
+                ></div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-lg">
+                <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                  <p class="text-white text-base font-bold leading-tight">The Power of Custom Short Links</p>
+                  <p class="text-[#9cabba] text-sm font-normal leading-normal">Explore the benefits of using custom short links for branding and tracking your campaigns.</p>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBa2OL2OymU3CWWO6x4sLHdhXX4mULAoMZ-mamxv6jSmLV4yu7ZCzXAoBoU_V_CzBT7WB-MALtKIf0EYw1h8RkP2NDr20tTVG1cd3v3iLoguuQ4bxXKaJa1aef0hjhbUB1AIczKR_sI0xIt6mKHeCADZ64cLXDPD-tzPx1XprThBeBnEIoeWu1YWH009Uz2LzRBJiNQLwwJOBRn3SodKb4w0zW0iHfoqP4sqXa_GvoKILHXy02GLbkp7chyAcNrshAdpHRG6SiI5ao");'
+                ></div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-lg">
+                <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                  <p class="text-white text-base font-bold leading-tight">Measuring the Success of Your Shortened URLs</p>
+                  <p class="text-[#9cabba] text-sm font-normal leading-normal">
+                    Learn how to track and analyze the performance of your shortened URLs to optimize your marketing efforts.
+                  </p>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDfmtalPySVcl35CpuTqS4NUccthH2kgx9lDYZuKF19EEc0cPhTGJBq27P38N0GGaw_-ZIDBNeBKeYe8_uX6VXTdsGQ7BZRSNDppJkiXNT1I38-IRW5BYPdT4ecqZM9zqGzhV8CqG1zr_up8fJJDFjcYOd355nJUGNXBWlrS5k8acugq9bvxBllQToiYf-BxkIArU_8Mc4crL8BcT8ytBl017AauS5e9cvFM6aYChLqOBpcgiEFF7jhuhzcq-kZTQBDcURrS4-I_D4");'
+                ></div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-lg">
+                <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                  <p class="text-white text-base font-bold leading-tight">ShortLink for Business: A Comprehensive Overview</p>
+                  <p class="text-[#9cabba] text-sm font-normal leading-normal">
+                    Discover how ShortLink can help businesses of all sizes streamline their link management and improve their marketing ROI.
+                  </p>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC4JRnHmPHyBhM5cFJeBfwDjXZmiT6p18EI-8RFoexdAlSg7MCYvcreOt4kGVbhHDsJu_wXfIHcaGLj3d9t9TaiSYtw7wnZ19b8vFKT6NMIyCS5JEUVZYPoeYyK9BBetBXBZ_gvqFZSbXcuT-zQmS9xQKkr6qPdRNqWaNv1FmBguGoaaCZcy8-QLY15shPrT7DXkYpSPGhMC_V9FUpvCN6VoYYgypjhftsSyzu7UNAaGWUChQNQGH8bbBwQm27sFXgZYencKJX8VYM");'
+                ></div>
+              </div>
+            </div>
+            <div class="flex items-center justify-center p-4">
+              <a href="#" class="flex size-10 items-center justify-center">
+                <div class="text-white" data-icon="CaretLeft" data-size="18px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path>
+                  </svg>
+                </div>
+              </a>
+              <a class="text-sm font-bold leading-normal tracking-[0.015em] flex size-10 items-center justify-center text-white rounded-full bg-[#283039]" href="#">1</a>
+              <a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-white rounded-full" href="#">2</a>
+              <a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-white rounded-full" href="#">3</a>
+              <span class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-white rounded-full" href="#">...</span>
+              <a class="text-sm font-normal leading-normal flex size-10 items-center justify-center text-white rounded-full" href="#">10</a>
+              <a href="#" class="flex size-10 items-center justify-center">
+                <div class="text-white" data-icon="CaretRight" data-size="18px" data-weight="regular">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path>
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

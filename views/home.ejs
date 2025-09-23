@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    
+          <%- include("partials/navbar") %>
+            
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <h1 class="text-white tracking-light text-[32px] font-bold leading-tight px-4 text-center pb-3 pt-6">Shorten your links</h1>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <form action="/url/shortUrl" method="post" id="form">
+                <input
+                  placeholder="https://www.example.com"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-[#283039] focus:border-none h-14 placeholder:text-[#9cabba] p-4 text-base font-normal leading-normal"
+                  <% if (locals.redirectUrl) { %>
+                    value="<%= redirectUrl %>"
+                  <% }  else { %>
+                    value=""
+                    <% }%>
+                    name="redirectUrl"
+                />
+              </label>
+            </div>
+            <div class="flex px-4 py-3 justify-center">
+              <!-- 
+                <input type="text" name="user" disabled value="">
+               -->
+              <input type="submit" value="Shorten"
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#0d80f2] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                
+            </input>
+            </div>
+          </form>
+            <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+              <label class="flex flex-col min-w-40 flex-1">
+                <div class="flex w-full flex-1 items-stretch rounded-lg">
+                  <input
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-[#283039] focus:border-none h-14 placeholder:text-[#9cabba] p-4 rounded-r-none border-r-0 pr-2 text-base font-normal leading-normal"
+                    <% if (locals.id) { %>
+                      value="http://localhost:8000/url/<%=id%>"
+                    <% }  else { %>
+                      value=""
+                      <% }%>
+                  />
+                  <!-- <div
+                    class="text-[#9cabba] flex border-none bg-[#283039] items-center justify-center pr-4 rounded-r-lg border-l-0"
+                    data-icon="Copy"
+                    data-size="24px"
+                    data-weight="regular"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"
+                      ></path>
+                    </svg>
+                  </div> -->
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const form=document.getElementById("form")
+      form.addEventListener("submit",(e)=>{
+        const token=document.cookie.includes("token");
+        if(!token)
+      {
+        let urlCount=Number(localStorage.getItem("urlCount"))
+        if(urlCount>=3)
+      {
+        alert("FREE LIMIT REACHED");
+        window.location.href="/login";
+        e.preventDefault();
+        return;
+      }
+      urlCount++;
+      localStorage.setItem("urlCount",urlCount);
+      }
+      })
+    </script>
+  </body>
+</html>

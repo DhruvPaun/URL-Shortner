@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+            <%- include("partials/navbar") %>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <div class="flex min-w-72 flex-col gap-3">
+                <p class="text-white tracking-light text-[32px] font-bold leading-tight">Dashboard</p>
+                <p class="text-[#9cabba] text-sm font-normal leading-normal">Here's a summary of your links</p>
+              </div>
+            </div>
+            <button
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#283039] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+            >
+              <span class="truncate">Generated Url : <%= signedIn.generatedUrl.length%></span>
+            </button>
+            <div class="px-4 py-3 @container">
+              <div class="flex overflow-hidden rounded-lg border border-[#3b4754] bg-[#111418]">
+                <table class="flex-1">
+                  <thead>
+                    <tr class="bg-[#1b2127]">
+                      <th class="table-05feaa75-b1c8-446f-9319-987bdf396e94-column-120 px-4 py-3 text-left text-white w-[400px] text-sm font-medium leading-normal">
+                        Original URL
+                      </th>
+                      <th class="table-05feaa75-b1c8-446f-9319-987bdf396e94-column-240 px-4 py-3 text-left text-white w-[400px] text-sm font-medium leading-normal">
+                        Shortened URL
+                      </th>
+                      <th class="table-05feaa75-b1c8-446f-9319-987bdf396e94-column-360 px-4 py-3 text-left text-white w-[400px] text-sm font-medium leading-normal">Clicks</th>
+                      <th class="table-05feaa75-b1c8-446f-9319-987bdf396e94-column-480 px-4 py-3 text-left text-white w-[400px] text-sm font-medium leading-normal">
+                        Date Created
+                      </th>
+                      <th class="table-05feaa75-b1c8-446f-9319-987bdf396e94-column-600 px-4 py-3 text-left text-white w-60 text-[#9cabba] text-sm font-medium leading-normal"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-t border-t-[#3b4754]">
+                      <% signedIn.generatedUrl.forEach(urlObj => {
+                        const url=urlObj.url;
+                        %>
+                      <td class="table-05feaa75-b1c8-446f-9319-987bdf396e94-column-120 h-[72px] px-4 py-2 w-[400px] text-[#9cabba] text-sm font-normal leading-normal">
+                        <a href="<%= url.redirectUrl %>"><%= url.redirectUrl %></a>
+                      </td>
+                      <td class="table-05feaa75-b1c8-446f-9319-987bdf396e94-column-240 h-[72px] px-4 py-2 w-[400px] text-[#9cabba] text-sm font-normal leading-normal">
+                       <a href="http://localhost:8000/url/<%= url.shortId %>">http://localhost:8000/url/<%= url.shortId %></a>
+                      </td>
+                      <td class="table-05feaa75-b1c8-446f-9319-987bdf396e94-column-360 h-[72px] px-4 py-2 w-[400px] text-[#9cabba] text-sm font-normal leading-normal"><%= url.history.length %></td>
+                      <td class="table-05feaa75-b1c8-446f-9319-987bdf396e94-column-480 h-[72px] px-4 py-2 w-[400px] text-[#9cabba] text-sm font-normal leading-normal">
+                        <%= url.createdAt.toLocaleDateString() %>
+                      </td>
+                    </tr>
+                    <% }) %>
+                  </tbody>
+                </table>
+              </div>
+              <style>
+                @container(max-width:120px){.table-05feaa75-b1c8-446f-9319-987bdf396e94-column-120{display: none;}}
+                @container(max-width:240px){.table-05feaa75-b1c8-446f-9319-987bdf396e94-column-240{display: none;}}
+                @container(max-width:360px){.table-05feaa75-b1c8-446f-9319-987bdf396e94-column-360{display: none;}}
+                @container(max-width:480px){.table-05feaa75-b1c8-446f-9319-987bdf396e94-column-480{display: none;}}
+                @container(max-width:600px){.table-05feaa75-b1c8-446f-9319-987bdf396e94-column-600{display: none;}}
+              </style>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

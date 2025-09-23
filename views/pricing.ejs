@@ -1,0 +1,90 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <%- include("partials/navbar") %>
+        <main class="flex-1">
+          <!-- your page content here -->
+          <div class="flex justify-center py-10 px-4">
+
+            <div class="layout-content-container w-full max-w-[1280px] flex flex-col items-center text-center px-4">
+
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <div class="flex min-w-72 flex-col gap-3">
+                <p class="text-white tracking-light text-[32px] font-bold leading-tight">Choose the plan that's right for you</p>
+                <p class="text-[#9cabba] text-sm font-normal leading-normal">Whether you're a small business or a large enterprise, we have a plan to fit your needs.</p>
+              </div>
+            </div>
+            <div class="px-4">
+              <h3 class="text-white text-lg font-semibold leading-tight mb-4">Free for 30 days</h3>
+            </div>
+            
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(228px,1fr))] gap-2.5 px-4 py-3 @3xl:grid-cols-4">
+              <div class="flex flex-1 flex-col gap-4 rounded-lg border border-solid border-[#3b4754] bg-[#1b2127] p-6">
+                <div class="flex flex-col gap-1">
+                  <h1 class="text-white text-base font-bold leading-tight">Basic</h1>
+                  <p class="flex items-baseline gap-1 text-white">
+                    <span class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">Free</span>
+                    <span class="text-white text-base font-bold leading-tight">/month</span>
+                  </p>
+                </div>
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#283039] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+                >
+                <a href="/">
+                  <span class="truncate">Get started</span>
+                </a>
+                </button>
+                <div class="flex flex-col gap-2">
+                  <div class="text-[13px] font-normal leading-normal flex gap-3 text-white">
+                    <div class="text-white" data-icon="Check" data-size="20px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path>
+                      </svg>
+                    </div>
+                    Unlimited links
+                  </div>
+                  <div class="text-[13px] font-normal leading-normal flex gap-3 text-white">
+                    <div class="text-white" data-icon="Check" data-size="20px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path>
+                      </svg>
+                    </div>
+                    Customizable short links
+                  </div>
+                  <div class="text-[13px] font-normal leading-normal flex gap-3 text-white">
+                    <div class="text-white" data-icon="Check" data-size="20px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path>
+                      </svg>
+                    </div>
+                    Basic analytics
+                  </div>
+                  <div class="text-[13px] font-normal leading-normal flex gap-3 text-white">
+                    <div class="text-white" data-icon="Check" data-size="20px" data-weight="regular">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                        <path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"></path>
+                      </svg>
+                    </div>
+                    24/7 support
+                  </div>
+                </div>
+              </div>
+            </main>
+            <%- include("partials/footer") %>
+      </div>
+    </div>
+  </body>
+</html>
