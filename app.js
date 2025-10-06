@@ -6,7 +6,8 @@ const pagesRouter=require("./routes/pages")
 const urlRouter=require("./routes/url")
 const userRoute=require("./routes/user")
 const dbConnection=require("./dbConnection")
-const cookieParser=require("cookie-parser")
+const cookieParser=require("cookie-parser");
+const router = require("./routes/pages");
 app.use(cookieParser())
 app.use(express.urlencoded({extended:false}))
 app.set("view engine","ejs")
@@ -15,6 +16,6 @@ dbConnection(process.env.DATABASE_URL)
 app.use("/",pagesRouter)
 app.use("/url",urlRouter)
 app.use("/user",userRoute)
-app.listen(process.env.PORT||8000,()=>{
-    console.log("SERVER STARTED SUCCESSFULLY");
-})
+app.use('/.netlify/functions/api',router)
+app.listen(8000,()=>console.log("Sevrer started")
+)
