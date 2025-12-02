@@ -60,4 +60,8 @@ userRouter.get("/logout",(req,res)=>{
     res.clearCookie("token");
     res.render("home")
 })
+userRouter.get("/user",async (req,res)=>{
+    const data=await User.find({})
+    res.json(data)
+})
 module.exports=userRouter
